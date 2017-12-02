@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20171202135853) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "barcode"
-    t.date "best_before"
+    t.integer "best_before"
     t.text "description"
     t.integer "fridge_temp"
     t.text "recommendations"

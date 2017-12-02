@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+h1.index {
+   font-size: 4rem;
+   color: #FFFFFF;
+ }
+
+ p.index {
+   font-size: 1em;
+ }
+
 .index-bg {
   height: 100%;
   background: url('https://farm5.staticflickr.com/4572/23922749377_45e792fdb0_b.jpg')
@@ -28,4 +38,14 @@
 header,
 body {
   text-align: center;
+}
+
+.footer {
+    position: fixed;
+    padding-top: 2em;
+    left: 0;
+    /*bottom: 0;*/
+    width: 100%;
+    color: white;
+    text-align: center;
 }

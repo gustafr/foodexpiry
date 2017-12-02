@@ -10,50 +10,50 @@
 
   <body style="text-align: center">
 
-      <!-- <nav class="navbar navbar-light bg-light justify-content-between">
+      <nav class="navbar navbar-light bg-light justify-content-between">
       <a class="navbar-brand" style="text-align: center">FoodExpiry</a>
-    </nav> -->
+    </nav>
 
-    <div class="index-bg">
-    <div class="row" style="padding-top: 18em; padding-bottom: 28em">
+    <div class="container">
+    <div class="row" style="padding-top: 6em; padding-bottom: 30em">
       <div class="col">
 
       </div>
       <div class="col-6" text-align: "center">
-        <h1 class="index">RealExpiryDate</h1>
+        <h1>#StopFoodWaste</h1>
         <h3></h3>
-        <h3>See the actual expiry date of food</h3>
-        <h5>We believe that all of us should do our part to reduce Food waste! A small place to start is at home.
-To help every household reduce their own food waste we have created this application to help you identify which food items is about to expire with recommendations on how to use these items with a nice recipe.</h5>
-<!-- It is easy to use,
+        <p>See the actual expiry date of food</p>
+        <p>We believe that all of us should do our part to reduce Food waste! A small place to start is at home.
+To help every household reduce their own food waste we have created this application to help you identify which food items is about to expire with recommendations on how to use these items with a nice recipe.
+It is easy to use,
 Scan your shopping list to add the items, that’s it!
 You can also find your items through the search function:
 Type in the item you are looking for and your will get great information to help you manage your food.
 Expiry date
 Plus date*
 Recommendations
-*Plus dates are the dates after your item expires that your product is still eatable.</p> -->
+*Plus dates are the dates after your item expires that your product is still eatable.</p>
         <div class="container" text-align: "center">
-
-            <p class="index">Search for a food item to see its real expiry date</p>
+          <div class="card-body">
+            <p class="card-text">Stop food waste</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <%= form_tag index_index_path, method: :get, id: 'submit-search' do %>
               <%= text_field_tag :name, params[:name], placeholder: 'Name', autofocus: true %>
               <%= submit_tag 'Skicka', id: 'search-button' %>
             <% end %>
-            <br>
 
             <% if @products.present? %>
               <% @products.each do |product| %>
                 <%= product.name %><br />
-                <%= product.description %><br /><br>
-                <p>Product can be used until: </p><%= Date.today() + product.best_before %> <br /><br>
-                <p>Product is good for: <%= product.recommendations %>
+                <%= product.description %><br />
+                <%= product.best_before %> <p>dagar hållbarhet</p><br />
+                <%= product.recommendations %>
               <% end %>
             <% end %>
 
-            <!-- <%= yield %> -->
+            <%= yield %>
       </div>
-
+      </div>
     </div>
     <div class="col">
 
@@ -64,11 +64,5 @@ Recommendations
   </div>
 
     <%= yield %>
-
-    <!-- <footer class="footer">
-      <div class="container">
-        <span class="text-muted">About</span>
-      </div>
-    </footer> -->
   </body>
 </html>

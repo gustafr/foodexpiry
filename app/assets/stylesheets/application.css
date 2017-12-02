@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+.index-bg {
+  height: 100%;
+  background: url('https://farm5.staticflickr.com/4572/23922749377_45e792fdb0_b.jpg')
+    center center no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background-color: none;
+  background: none;
+}
+
+header,
+body {
+  text-align: center;
+}

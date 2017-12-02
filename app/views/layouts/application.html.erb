@@ -8,7 +8,61 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="text-align: center">
+
+      <nav class="navbar navbar-light bg-light justify-content-between">
+      <a class="navbar-brand">Navbar</a>
+      <!-- <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </nav>
+
+    <div class="index-bg">
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col-6" text-align: "center">
+        <h1>#StopFoodWaste</h1>
+        <h3></h3>
+        <p>See the actual expiry date of food</p>
+        <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Stop food waste now</button> -->
+
+        <div class="container" text-align: "center">
+        <!-- < class="card" style="width: 40rem;"> -->
+          <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+          <div class="card-body">
+            <!-- <h4 class="card-title">Card title</h4> -->
+            <p class="card-text">Stop food waste</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <%= form_tag index_index_path, method: :get, id: 'submit-search' do %>
+              <%= text_field_tag :name, params[:name], placeholder: 'Name', autofocus: true %>
+              <%= submit_tag 'Skicka', id: 'search-button' %>
+            <% end %>
+
+            <% if @products.present? %>
+              <% @products.each do |product| %>
+                <%= product.name %><br />
+                <%= product.description %><br />
+                <%= product.best_before %> <p>dagar hållbarhet</p><br />
+                <%= product.recommendations %>
+              <% end %>
+            <% end %>
+
+            <%= yield %>
+      </div>
+      </div>
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+
+    </div>
+  </div>
+<!-- <body background="https://farm5.staticflickr.com/4572/23922749377_45e792fdb0_b.jpg"></background> -->
+
     <%= yield %>
   </body>
 </html>

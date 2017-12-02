@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+seed_file = Rails.root.join('db', 'seeds', 'products.yml')
+config = YAML::load_file(seed_file)
+counter = 0
+Product.create!(config) do |c|
+  puts "Create product #{counter += 1} with name: #{c.name}"
+end

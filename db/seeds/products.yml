@@ -1,0 +1,34 @@
+- name: Arla A-Fil Jordgubb eko
+  best_before: 18
+  description: Svagt syrlig fil med lätt gräddighet och god smak av jordgubbar, gjord på svensk mjölk från ekologiska Arlagårdar. Filen innehåller den hälsosamma bakterien Lactobacillus acidophilus LA-5. A-fil är lite tjockare i konsistensen och kan med fördel ätas tillsammans med müsli eller flingor. Den passar lika bra till frukost som mellanmål. Varumärket Arla Ko garanterar att produkten är gjord på 100 procent svensk mjölk. Den nya bruna kartongen har 24 procent lägre klimatpåverkan jämfört med den tidigare vita kartongen.
+  fridge_temp: 8
+  recommendations: Fil håller i många veckor oöppnad
+  plus_days_min: 15
+  plus_days_max: 30
+
+- name: Salta pinnar COOP
+  barcode: 7340011445548
+  best_before: 180
+  description: Salta pinnar, helt enkelt
+  fridge_temp: 100
+  recommendations: Åratal
+  plus_days_min: 600
+  plus_days_max: 900
+
+- name: Ramlösa Citrus
+  barcode: 73145721
+  best_before: 30
+  description: Citrus och citron
+  fridge_temp: 7
+  recommendations: Bara smaken som avmattas
+  plus_days_min: 30
+  plus_days_max: 9999
+
+- name: Pepsi Max
+  barcode: 7310070765987
+  best_before: 30
+  description: Kolsyrad läskedryck
+  fridge_temp: 7
+  recommendations: Åtatal, men smakar piss oavsett ålder
+  plus_days_min: 30
+  plus_days_max: 9999

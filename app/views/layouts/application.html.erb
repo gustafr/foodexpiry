@@ -11,29 +11,30 @@
   <body style="text-align: center">
 
       <nav class="navbar navbar-light bg-light justify-content-between">
-      <a class="navbar-brand">Navbar</a>
-      <!-- <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
+      <a class="navbar-brand" style="text-align: center">FoodExpiry</a>
     </nav>
 
     <div class="index-bg">
-    <div class="row">
+    <div class="row" style="padding-top: 6em; padding-bottom: 30em">
       <div class="col">
-        1 of 3
+
       </div>
       <div class="col-6" text-align: "center">
         <h1>#StopFoodWaste</h1>
         <h3></h3>
         <p>See the actual expiry date of food</p>
-        <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Stop food waste now</button> -->
-
+        <p>We believe that all of us should do our part to reduce Food waste! A small place to start is at home.
+To help every household reduce their own food waste we have created this application to help you identify which food items is about to expire with recommendations on how to use these items with a nice recipe.
+It is easy to use,
+Scan your shopping list to add the items, that’s it!
+You can also find your items through the search function:
+Type in the item you are looking for and your will get great information to help you manage your food.
+Expiry date
+Plus date*
+Recommendations
+*Plus dates are the dates after your item expires that your product is still eatable.</p>
         <div class="container" text-align: "center">
-        <!-- < class="card" style="width: 40rem;"> -->
-          <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
           <div class="card-body">
-            <!-- <h4 class="card-title">Card title</h4> -->
             <p class="card-text">Stop food waste</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <%= form_tag index_index_path, method: :get, id: 'submit-search' do %>
@@ -55,13 +56,12 @@
       </div>
     </div>
     <div class="col">
-      3 of 3
+
     </div>
   </div>
 
     </div>
   </div>
-<!-- <body background="https://farm5.staticflickr.com/4572/23922749377_45e792fdb0_b.jpg"></background> -->
 
     <%= yield %>
   </body>

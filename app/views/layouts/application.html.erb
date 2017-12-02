@@ -15,15 +15,15 @@
     </nav> -->
 
     <div class="index-bg">
-    <div class="row" style="padding-top: 18em; padding-bottom: 28em">
+    <div class="row" style="padding-top: 18em; padding-bottom: 18em">
       <div class="col">
 
       </div>
       <div class="col-6" text-align: "center">
-        <h1 class="index">RealExpiryDate</h1>
+        <h1 class="index">Food Expiry</h1>
         <h3></h3>
-        <h3>See the actual expiry date of food</h3>
-        <h5>We believe that all of us should do our part to reduce Food waste! A small place to start is at home.
+        <h3>How long does food actually last? Here's our community review index of expiration dates.</h3>
+        <h5>We believe that all of us should do our part to reduce food waste. A small place to start is at home.
 To help every household reduce their own food waste we have created this application to help you identify which food items is about to expire with recommendations on how to use these items with a nice recipe.</h5>
 <!-- It is easy to use,
 Scan your shopping list to add the items, that’s it!
@@ -35,13 +35,13 @@ Recommendations
 *Plus dates are the dates after your item expires that your product is still eatable.</p> -->
         <div class="container" text-align: "center">
 
-            <p class="index">Search for a food item to see its real expiry date</p>
+            <p class="index">Search for a food item to see how long it acutally will last. We'll assume the product was bought today.</p>
             <%= form_tag index_index_path, method: :get, id: 'submit-search' do %>
               <%= text_field_tag :name, params[:name], placeholder: 'Name', autofocus: true %>
               <%= submit_tag 'Skicka', id: 'search-button' %>
             <% end %>
             <br>
-
+            <div style="background-color: white; padding-top: 1em; padding-bottom: 1em; opacity: .5;">
             <% if @products.present? %>
               <% @products.each do |product| %>
                 <%= product.name %><br />
@@ -50,7 +50,7 @@ Recommendations
                 <p>Product is good for: <%= product.recommendations %>
               <% end %>
             <% end %>
-
+          </div>
             <!-- <%= yield %> -->
       </div>
 
@@ -65,10 +65,10 @@ Recommendations
 
     <%= yield %>
 
+
     <!-- <footer class="footer">
-      <div class="container">
-        <span class="text-muted">About</span>
-      </div>
+      <div class="container"> -->
+      <!-- </div>
     </footer> -->
   </body>
 </html>

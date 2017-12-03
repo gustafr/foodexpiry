@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+h1.index {
+   font-size: 4rem;
+   color: #FFFFFF;
+   line-height: 90%;
+ }
+/*
+ p.index {
+   font-size: 2em;
+ }*/
+
+.index-bg {
+  height: 100%;
+  background: url('http://lisaeriksson.net/lisas_middleman_site/veggies_on_wooden_table.jpg')
+    center center no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background-color: none;
+  background: none;
+}
+
+header,
+body {
+  text-align: center;
+}
+
+.footer {
+    position: fixed;
+    padding-top: 2em;
+    left: 0;
+    /*bottom: 0;*/
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+
+}
